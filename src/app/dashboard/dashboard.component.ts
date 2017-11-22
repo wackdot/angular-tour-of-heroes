@@ -15,9 +15,12 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.getHeroes();
   }
- 
+  
   getHeroes(): void {
+    // Note: heroes refers to the return value from getHeroes() method.
+    // The return value is an array of Hero class(es)
+    // this.heroes refers the property of this component
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+      .subscribe(heroes => this.heroes = heroes.slice(0, 4));
   }
 }
