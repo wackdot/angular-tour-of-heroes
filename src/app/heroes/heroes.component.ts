@@ -10,7 +10,6 @@ import { HeroService } from '../hero.service';
 })
 export class HeroesComponent implements OnInit {
    
-  selectedHero: Hero;
   heroes: Hero[];
  
   // HeroService is injected into the component when it is created
@@ -20,10 +19,6 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
   
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
-
   getHeroes(): void {
     // Note: The corresponding method in hero.service returns an
     // Observable<Hero[]> asynchronously as it request is being fulfilled by
