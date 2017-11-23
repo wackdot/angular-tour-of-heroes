@@ -1,5 +1,6 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
+// Replaces the mock-heroes.ts 
 export class InMemoryDataService implements InMemoryDbService {
  createDb() {
    const heroes = [
